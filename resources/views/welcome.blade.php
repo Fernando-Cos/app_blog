@@ -10,6 +10,8 @@
         
     </head>
     <body>
-            <h2>Isso aqui é o blog</h2>
+        <div id="app">
+            <mainapp></mainapp>
+        </div>
     </body>
 </html>
