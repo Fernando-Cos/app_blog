@@ -14,4 +14,5 @@
             <mainapp></mainapp>
         </div>
     </body>
+    <scrip src="{{mix('/js/app.js')}}"></scrip>
 </html>
