@@ -1,5 +1,6 @@
 <template>
     <div>
-        <h2>Esse aqui é um componente do vue</h2>
+        <h1>Menu</h1>
+        <router-view></router-view>
     </div>
 </template>
