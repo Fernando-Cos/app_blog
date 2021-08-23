@@ -1921,9 +1921,15 @@ __webpack_require__.r(__webpack_exports__);
       name: 'fernando'
     };
   },
+  beforeCreate: function beforeCreate() {
+    console.log(this.name);
+  },
   created: function created() {
     // chamando principalmente dados iniciais dele
     console.log('testeapp', this.name);
+  },
+  mounted: function mounted() {
+    console.log(this.$refs.myref);
   }
 });
 

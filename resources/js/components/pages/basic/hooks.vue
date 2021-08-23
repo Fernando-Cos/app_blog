@@ -12,9 +12,17 @@
                 name: 'fernando'
             }
         },
+
+        beforeCreate() {
+            console.log(this.name)
+        },
+
         created() {
             // chamando principalmente dados iniciais dele
             console.log('testeapp', this.name);
+        },
+        mounted(){
+            console.log(this.$refs.myref);
         }
     } 
 

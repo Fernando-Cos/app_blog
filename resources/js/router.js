@@ -16,7 +16,6 @@ const routes = [
         component: newRoutePage
     },
 
-
     //  vue hooks...
     {
         path: '/hooks',
