@@ -19602,7 +19602,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h2", [_vm._v("teste")])])
+    return _c("div", [_c("h2", [_vm._v("Esse aqui é um componente do vue")])])
   }
 ]
 render._withStripped = true
@@ -31834,7 +31834,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 Vue.component('mainapp', __webpack_require__(/*! ./components/mainapp */ "./resources/js/components/mainapp.vue")["default"]);
 var app = new Vue({
-  al: '#app'
+  el: '#app'
 });
 
 /***/ }),

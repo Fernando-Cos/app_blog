@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h2>teste</h2>
+        <h2>Esse aqui é um componente do vue</h2>
     </div>
 </template>
