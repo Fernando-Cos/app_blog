@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,11 +10,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/new', 'TestController@controllerMethod');
 
-Route::get('/new', 'TestController@controllerMethod');
 
 Route::any('{slug}', function() {
     return view('welcome');
