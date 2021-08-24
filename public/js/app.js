@@ -1960,16 +1960,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       views: 0,
-      blogs: []
+      blogs: [],
+      showItem: false
     };
   },
   methods: {
     updateCounter: function updateCounter(number) {
       this.views += number;
+    },
+    chengeShowItem: function chengeShowItem() {
+      this.showItem = !this.showItem;
     }
   },
   created: function created() {
@@ -1978,21 +1988,22 @@ __webpack_require__.r(__webpack_exports__);
 
     var posts = [{
       title: 'Esse é o titulo do post',
-      'post': 'esse é o post do blog',
+      'post': 'esse é o post do blog 1',
       id: 1
     }, {
       title: 'Esse é o titulo do post',
-      'post': 'esse é o post do blog',
+      'post': 'esse é o post do blog 2',
       id: 2
     }, {
       title: 'Esse é o titulo do post',
-      'post': 'esse é o post do blog',
+      'post': 'esse é o post do blog 3',
       id: 3
     }, {
       title: 'Esse é o titulo do post',
-      'post': 'esse é o post do blog',
+      'post': 'esse é o post do blog 4',
       id: 4
     }];
+    this.blogs = posts;
   }
 });
 
@@ -19750,40 +19761,72 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("O número é: " + _vm._s(_vm.views))]),
-    _vm._v(" "),
-    _c(
-      "button",
-      {
-        on: {
-          click: function($event) {
-            return _vm.updateCounter(1)
+  return _c(
+    "div",
+    [
+      _c("h1", [_vm._v("O número é: " + _vm._s(_vm.views))]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          on: {
+            click: function($event) {
+              return _vm.updateCounter(1)
+            }
           }
-        }
-      },
-      [_vm._v("Incrementar")]
-    ),
-    _vm._v(" "),
-    _c(
-      "button",
-      {
-        on: {
-          click: function($event) {
-            return _vm.updateCounter(-1)
+        },
+        [_vm._v("Incrementar")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          on: {
+            click: function($event) {
+              return _vm.updateCounter(-1)
+            }
           }
-        }
-      },
-      [_vm._v("Descrementar")]
-    ),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _c("br"),
-    _vm._v(" "),
-    _c("div")
-  ])
+        },
+        [_vm._v("Descrementar")]
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _vm._l(_vm.blogs, function(blog, i) {
+        return _vm.blogs.length
+          ? _c("div", { key: i }, [
+              _c("h1", [_vm._v(_vm._s(blog.title))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(blog.post))])
+            ])
+          : _vm._e()
+      }),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", [
+        _vm.showItem
+          ? _c("h2", [_vm._v('Todos os itens se "showItem" for verdadeiro ')])
+          : _c("p", [_vm._v('Todos os itens se "showItem" for False ')])
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          on: {
+            click: function($event) {
+              _vm.showItem = !_vm.showItem
+            }
+          }
+        },
+        [_vm._v("checando os itens")]
+      )
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
